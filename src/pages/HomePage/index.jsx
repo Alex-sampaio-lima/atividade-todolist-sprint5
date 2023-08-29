@@ -1,14 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FruitForm } from "../../components/FruitForm";
 import { FruitList } from "../../components/FruitList";
+import { FruitContext } from "../../providers";
 
 export const HomePage = () => {
-   const [fruitList, setFruitList] = useState([]);
+   const { fruitList, setFruitList, addFruit } = useContext(FruitContext)
 
-   const addFruit = (fruit) => {
-      const newFruit = { ...fruit, id: crypto.randomUUID() };
-      setFruitList([...fruitList, newFruit]);
-   };
 
    return (
       <main>

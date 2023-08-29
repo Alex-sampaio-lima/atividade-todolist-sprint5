@@ -1,4 +1,6 @@
 export const FruitCard = ({fruit, removeFruit}) => {
+    
+    
     return(
         <li>
             <h3>{fruit.name}</h3>
